@@ -56,6 +56,8 @@ todoControl = addEventListener('submit', function(event){
     headerInput.value = '';
 });
 
-todoData = JSON.parse(localStorage.getItem("todoData"));
+if (localStorage.getItem("todoData")) {
+    todoData = JSON.parse(localStorage.getItem("todoData"));
+}
 
 render();
